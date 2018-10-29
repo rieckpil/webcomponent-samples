@@ -7,7 +7,7 @@ class HelloWorld extends HTMLElement {
     }
   
     sayHello() {
-      console.log("Hello World was clicked!");
+      console.log("Hello World was clicked at " + new Date());
     }
   }
   
