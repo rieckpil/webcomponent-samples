@@ -10,12 +10,16 @@ class HelloWorld extends HTMLElement {
       return this.hasAttribute('disabled');
     }  
 
+    get value() {
+      return this.getAttribute('value');
+    }
+
     connectedCallback() {
       this.innerHTML = "<b>I'm an x-foo-with-markup!</b>";
     }
   
     sayHello() {
-      console.log("Hello World was clicked at " + new Date() + " " + this.disabled);
+      console.log("Hello World was clicked at " + new Date() + " " + this.disabled + " " + this.value);
 
       fetch(`https://jsonplaceholder.typicode.com/users/1`)
         .then((response) => response.text())
